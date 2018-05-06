@@ -1,6 +1,6 @@
 {
     "name": "ecla",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "Make a dazzling node API",
     "main": "src/index.js",
     "scripts": {
