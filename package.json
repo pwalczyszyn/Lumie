@@ -4,7 +4,9 @@
     "description": "Make a dazzling node API",
     "main": "src/index.js",
     "scripts": {
+        "start": "npm start --prefix example",
         "test": "nyc ava -v",
+        "test:example": "npm test --prefix example",
         "lint": "eslint src/",
         "ava": "ava"
     },
@@ -54,6 +56,7 @@
     },
     "pre-commit": [
         "lint",
-        "test"
+        "test",
+        "test:example"
     ]
 }
