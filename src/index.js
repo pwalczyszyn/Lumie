@@ -68,7 +68,7 @@ function generateRoutes(app) {
     for (const i in _routes) {
         logger.log(`\n[${i}]`);
         for (const j in _routes[i]) {
-            logger.log(_routes[i][j]);
+            logger.log(_routes[i][j].desc());
             _routes[i][j].create(app);
         }
     }

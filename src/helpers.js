@@ -1,4 +1,4 @@
-function JoinPathSlash(path) {
+function joinPathSlash(path) {
     return path.replace(/\\/g, '/');
 }
 
@@ -7,6 +7,6 @@ function capitalize(string) {
 }
 
 module.exports = {
-    JoinPathSlash,
+    joinPathSlash,
     capitalize
 };
