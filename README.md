@@ -30,17 +30,17 @@ By default, we use the name of the file that exports the routing definition to n
 const express = require('express');
 const path = require('path');
 const ecla = require('ecla');
-const permissions = require('./permissions')
 
 const app = express();
 
 ecla.load(app, {
     preURL: 'api',
+    verbose: true,
     ignore: ['*.spec', '*.action'],
     controllers_path: path.join(__dirname, 'controllers')
 });
 
-app.listen(3000, '127.0.0.1', () => {
+const server = app.listen(3000, '127.0.0.1', () => {
     const { address, port } = server.address();
     console.log('Example app listening at http://%s:%s', address, port);
 });
@@ -50,7 +50,7 @@ app.listen(3000, '127.0.0.1', () => {
 
 |Name|type|default value|Description|
 |--  |--  |--           |--         |
-| **verbose** | `boolean` | `true` |Will print or not the routes name in the console|
+| **verbose** | `boolean` | `false` |Will print or not the routes name in the console|
 | **preURL** | `string` | `null` |Suffix your routes urls|
 | **ignore** | `string[]` | `null` |The module will not try to find a routing definition in those files.|
 | **controllers_path** | `string` | `path.join(__dirname, 'controllers')` |The path of your controllers folder.|
