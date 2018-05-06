@@ -73,3 +73,23 @@ test('permissions should pass', (t) => {
     validators.permissions(() => true, {});
     t.pass();
 });
+
+test('routingFiles should fail with incorrect value', (t) => {
+    const error = t.throws(() => {
+        validators.routingFiles([], {});
+    }, Error);
+
+    t.is(error.message, 'Expected routingFiles to be a string');
+});
+
+test('routingFiles should use default value', (t) => {
+    const op = {};
+    validators.routingFiles(undefined, op);
+    t.is(op.routingFiles, '*.routing');
+});
+
+test('routingFiles should pass', (t) => {
+    const op = {};
+    validators.routingFiles('*.routingBis', op);
+    t.is(op.routingFiles, '*.routingBis');
+});
