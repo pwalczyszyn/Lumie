@@ -2,7 +2,7 @@ const fs = require('fs');
 const cpath = require('path');
 const mm = require('micromatch');
 
-const Route = require('./Route');
+const Route = require('./route');
 const logger = require('./logger');
 const validators = require('./validators');
 const { capitalize } = require('./helpers');
