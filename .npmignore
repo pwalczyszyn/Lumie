@@ -21,7 +21,8 @@ package-lock.json
 Labo
 
 # Other
-example/
-images/
-test/
+example
+images
+test
 .eslintrc.json
+documentation
