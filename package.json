@@ -1,6 +1,6 @@
 {
-    "name": "ecla",
-    "version": "1.0.1",
+    "name": "lumie",
+    "version": "0.0.1",
     "description": "Make a dazzling node API",
     "main": "src/index.js",
     "scripts": {
@@ -12,23 +12,22 @@
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/Alex-Levacher/Ecla"
+        "url": "https://github.com/Alex-Levacher/Lumie"
     },
     "keywords": [
+        "javascript",
+        "nodejs",
         "express",
-        "controller",
         "MVC",
-        "generator",
         "API",
         "REST",
-        "javascript",
-        "nodejs"
+        "controller",
+        "generator"
     ],
     "author": {
         "name": "Alexandre Levacher"
     },
     "license": "MIT",
-    "readmeFilename": "README.md",
     "dependencies": {
         "express": "^4.16.3",
         "micromatch": "^3.1.10"
