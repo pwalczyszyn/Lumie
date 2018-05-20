@@ -1,4 +1,5 @@
 const test = require('ava');
+
 const validators = require('../src/validators');
 
 test('ctrlsPath should fail without path', (t) => {

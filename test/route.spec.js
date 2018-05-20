@@ -1,6 +1,7 @@
 const test = require('ava');
-const Route = require('../src/route');
 const sinon = require('sinon');
+
+const Route = require('../src/route');
 
 test('create get route without permissions should work', (t) => {
     const prepareRoute = {

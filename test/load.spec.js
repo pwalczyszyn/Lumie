@@ -1,4 +1,5 @@
 const test = require('ava');
+
 const expressCtrl = require('../src');
 
 test('should fail without express app', (t) => {

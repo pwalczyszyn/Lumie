@@ -1,4 +1,5 @@
 const test = require('ava');
+
 const { joinPathSlash, capitalize } = require('../src/helpers');
 
 test('capitalizeshould works with one word', (t) => {
