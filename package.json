@@ -5,8 +5,9 @@
     "main": "src/index.js",
     "scripts": {
         "start": "npm start --prefix example",
-        "test": "nyc ava -v",
+        "test:src": "nyc ava -v",
         "test:example": "npm test --prefix example",
+        "test": "npm run test:src && npm run test:example",
         "lint": "eslint src/",
         "ava": "ava"
     },
@@ -35,13 +36,11 @@
     "devDependencies": {
         "ava": "^0.25.0",
         "eslint": "^4.19.1",
-        "eslint-config-airbnb": "^16.1.0",
+        "eslint-config-airbnb-base": "^12.1.0",
         "eslint-plugin-import": "^2.11.0",
-        "eslint-plugin-jsx-a11y": "^6.0.3",
-        "eslint-plugin-react": "^7.7.0",
-        "nyc": "^11.7.1",
+        "nyc": "^12.0.2",
         "pre-commit": "^1.2.2",
-        "sinon": "^5.0.4"
+        "sinon": "^6.0.0"
     },
     "ava": {
         "files": [
@@ -55,7 +54,7 @@
     },
     "pre-commit": [
         "lint",
-        "test",
+        "test:src",
         "test:example"
     ]
 }
