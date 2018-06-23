@@ -1,5 +1,5 @@
-const postCars = require('./create-cars.action');
-const getCars = require('./get-cars.action');
+const postCars = require('./car-post.action');
+const getCars = require('./car-get.action');
 
 module.exports = {
     '/': {

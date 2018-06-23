@@ -2,9 +2,9 @@ const test = require('ava');
 const request = require('supertest');
 const app = require('../../app');
 
-test('[POST] /cars should pass', async (t) => {
+test('[POST] /car should pass', async (t) => {
     const { body, status } = await request(app)
-    .post('/api/cars')
+    .post('/api/car')
     .send({})
     .set('Accept', 'application/json');
 
@@ -12,18 +12,18 @@ test('[POST] /cars should pass', async (t) => {
     t.is(status, 200);
 });
 
-test('[GET] /cars should pass', async (t) => {
+test('[GET] /car should pass', async (t) => {
     const { body, status } = await request(app)
-    .get('/api/cars')
+    .get('/api/car')
     .set('Accept', 'application/json');
 
     t.is(body.length, 2);
     t.is(status, 200);
 });
 
-test('[GET] /cars/:id should pass', async (t) => {
+test('[GET] /car/:id should pass', async (t) => {
     const { body, status } = await request(app)
-    .get('/api/cars/lambo')
+    .get('/api/car/lambo')
     .set('Accept', 'application/json');
 
     t.is(body.brand, 'lamborghini');

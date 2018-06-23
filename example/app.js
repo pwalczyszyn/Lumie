@@ -1,6 +1,6 @@
 const express = require('express');
 const path = require('path');
-const expressCtrl = require('../src');
+const Lumie = require('../src');
 const permissions = require('./permissions');
 
 const app = express();
@@ -14,7 +14,7 @@ const app = express();
 //     next();
 // });
 
-expressCtrl.load(app, {
+Lumie.load(app, {
     verbose: process.env.NODE_ENV !== 'test',
     preURL: 'api',
     ignore: ['*.spec', '*.action'],
