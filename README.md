@@ -1,4 +1,4 @@
-[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social)](http://bit.ly/2I9MurX)
+[![Twitter URL](https://img.shields.io/twitter/url/https/twitter.com/fold_left.svg?style=social)](http://bit.ly/Share-Lumie-twitter)
 
 ![Lumie Logo](https://raw.githubusercontent.com/Alex-Levacher/Lumie/master/images/Lumie.png)
 
