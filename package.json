@@ -1,6 +1,6 @@
 {
     "name": "lumie",
-    "version": "0.0.1",
+    "version": "0.1.0",
     "description": "Make a dazzling node API",
     "main": "src/index.js",
     "scripts": {
@@ -30,7 +30,6 @@
     },
     "license": "MIT",
     "dependencies": {
-        "express": "^4.16.3",
         "micromatch": "^3.1.10"
     },
     "devDependencies": {
