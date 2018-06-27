@@ -2,7 +2,7 @@
 
 ![Lumie Logo](https://raw.githubusercontent.com/Alex-Levacher/Lumie/master/images/Lumie.png)
 
-## 🤔 WHY ??
+## 🤔 DESCRIPTION
 
 Lumie is a lightweight module that allows you to set up a scalable controllers architecture for your nodejs project.
 
@@ -55,7 +55,7 @@ const server = app.listen(3000, "127.0.0.1", () => {
 | -------------------- | ---------- | ------------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
 | **verbose**          | `boolean`  | `false`                               | Will print or not the routes name in the console                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | **preURL**           | `string`   | `null`                                | Suffix your routes URLs                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
-| **ignore**           | `string[]` | `null`                                | The module will not try to find a routing definition in those files.                                                                                                                                                                                                                                                                                                                                                                                                                             |
+| **ignore**           | `string[]` | `null`                                | Lumie will not try to find a routing definition in those files.                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **controllers_path** | `string`   | `path.join(__dirname, 'controllers')` | The path of your controllers folder.                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | **routing_files**    | `string`   | `*.routing`                           | How you want to name routing files.                                                                                                                                                                                                                                                                                                                                                                                                                                                              |
 | **permissions**      | `function` | `null`                                | A function that takes in parameter a **level access** and returns an [**express middleware**](https://expressjs.com/en/guide/using-middleware.html). This is useful if you want to restrict access for some URLs. With this option enabled, you will be able to set in each route configuration an option level that will be passed to your permission function [( example )](https://github.com/Alex-Levacher/Lumie/blob/master/example/permissions.js) |
@@ -93,21 +93,21 @@ const getCars = require("./car-get.action");
 
 module.exports = {
   path: "awesome-cars", // rename the path of the route (optional)
-  "/": {
+  '/': {
     post: {
       middlewares: postCars.middlewares,
       action: postCars.action,
-      level: "public"
+      level: 'public'
     },
     get: {
       action: getCars.getAll,
-      level: "public"
+      level: 'public'
     }
   },
-  "/:id": {
+  '/:id': {
     get: {
       action: getCars.getOne,
-      level: "public"
+      level: 'public'
     }
   }
 };
@@ -118,7 +118,7 @@ module.exports = {
         < get | put | delete | post >: {
             action: < function(req, res) >,
             level: < parameters of you permission function >, // Optional
-            middlewares: < Array(function(req, res, next)) > // Optional
+            middlewares: < Array(function(req, res, next)) >// Optional
         }
     }
 ```
@@ -149,10 +149,14 @@ Here are the next features planned, let me know if you have some ideas
 * Create a CLI to generate new controllers / projects
 
 ## ☕️ SUPPORT
+You can support the project by
+* Star our GitHub repo ⭐️
+* [Suggest ideas](https://github.com/Alex-Levacher/Lumie/issues/3) to help me promote Lumie 🌎
+* Support Lumie on [IH](https://www.indiehackers.com/forum/show-ih-an-opinionated-npm-module-to-create-better-apps-and-ship-faster-86cf3010ad) & [echoJS](http://www.echojs.com/news/27102)
 
 If you are struggling to setup Lumie, you found a bug or if you have some improvement ideas, feel free to [create an issue](https://github.com/Alex-Levacher/Lumie/issues)<br><br>
 <a href="https://www.buymeacoffee.com/AlexLevacher" target="_blank"><img src="https://www.buymeacoffee.com/assets/img/custom_images/black_img.png" alt="Buy Me A Coffee" style="height: auto !important;width: auto !important;" ></a>
 
 ## ⚖️ LICENSE
 
-This software is licensed under the MIT © AlexLevacher
+This software is licensed under the MIT © [Alex Levacher](mailto:levacher.alex@gmail.com)
