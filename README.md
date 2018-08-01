@@ -128,12 +128,12 @@ module.exports = {
 There is **2** common way to create a controller with Lumie, you can take a look [here](https://github.com/Alex-Levacher/Lumie/blob/master/example/controllers) to learn how to implement them.
 
 * **Minimal** ([sample](https://github.com/Alex-Levacher/Lumie/blob/master/example/controllers/simple-ctrl.js)): You only create one file which takes as name, the name of the controller you want to create. Then you define the routing definition and the functions. This method is recommended if you plan to have a small controller with few actions.
-* **Structured** ([sample](https://github.com/Alex-Levacher/Lumie/tree/master/example/controllers/users)): You create a new directory with the name of the controller. Inside, you create:<br>
+* **Structured** ([sample](https://github.com/Alex-Levacher/Lumie/tree/master/example/controllers/user)): You create a new directory with the name of the controller. Inside, you create:<br>
   * `[your-controller-name].routing.js` which contains the routing definition
   * `[your-controller-name].actions.js` which contains the action functions of the controller.
   * `[your-controller-name].spec.js` This one is optional
 
-If your controller is pretty heavy, with a lot of functions, we recommend to create one file per action (`create-user.action.js`, `get-user.action.js`, etc… ) ([sample](https://github.com/Alex-Levacher/Lumie/tree/master/example/controllers/cars))
+If your controller is pretty heavy, with a lot of functions, we recommend to create one file per action (`create-user.action.js`, `get-user.action.js`, etc… ) ([sample](https://github.com/Alex-Levacher/Lumie/tree/master/example/controllers/car))
 
 ## 🤙 EXAMPLES
 
