@@ -1,5 +1,3 @@
-const { joinPathSlash } = require('./helpers');
-
 class Route {
     constructor(options) {
         this.verb = options.verb;
@@ -13,18 +11,18 @@ class Route {
     create(app) {
         if (this.permissions) {
             app[this.verb](
-                joinPathSlash(this.path),
+                this.path,
                 this.permissions(this.level),
                 this.middlewares,
                 this.action
             );
             return;
         }
-        app[this.verb](joinPathSlash(this.path), this.middlewares, this.action);
+        app[this.verb](this.path, this.middlewares, this.action);
     }
 
     desc() {
-        return `\t${this.level}\t${this.verb}\t[${joinPathSlash(this.path)}]`;
+        return `\t${this.level}\t${this.verb}\t[${this.path}]`;
     }
 }
 

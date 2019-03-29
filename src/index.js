@@ -5,7 +5,7 @@ const mm = require('micromatch');
 const Route = require('./route');
 const logger = require('./logger');
 const validators = require('./validators');
-const { capitalize } = require('./helpers');
+const { capitalize, joinUrlPath } = require('./helpers');
 
 const _routes = {};
 const _options = {};
@@ -28,7 +28,7 @@ function browseControllerObject(ctrlDefinition, path) {
                 verb: verbName,
                 action: action[verbName].action,
                 level: action[verbName].level,
-                path: cpath.join(path, actionName),
+                path: joinUrlPath(path, actionName),
                 permissions: _options.permissions,
                 middlewares: action[verbName].middlewares
             });
@@ -59,7 +59,7 @@ function browseDirectory(filePath, urlPath) {
         if (controller.path) {
             realCtrlName = controller.path;
         }
-        const path = cpath.join('/', _options.preURL, urlPath, realCtrlName);
+        const path = joinUrlPath('/', _options.preURL, urlPath, realCtrlName);
         return browseControllerObject(controller, path);
     });
 }
